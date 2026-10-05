@@ -44,19 +44,21 @@
 
     <h1>英打遊戲版本二</h1>
 
-    <img src="keyboard.png" alt="英文鍵盤圖片">
+    <!-- 已更新相對路徑至 assets/ 資料夾 -->
+    <img src="assets/keyboard.png" alt="英文鍵盤圖片">
 
     <button onclick="playSound()">開始</button>
 
     <p id="message"></p>
 
-    <audio id="beepSound" src="beep.wav"></audio>
+    <!-- 已更新相對路徑至 assets/ 資料夾 -->
+    <audio id="beepSound" src="assets/beep.wav"></audio>
 
     <script>
         function playSound() {
             const sound = document.getElementById("beepSound");
             sound.currentTime = 0;
-            sound.play(); // 直接播放 beep.wav 檔案內建的雙嗶聲音效
+            sound.play();
         }
     </script>
 

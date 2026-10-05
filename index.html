@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英打遊戲版本二</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        img {
+            width: 500px;
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>英打遊戲版本二</h1>
+
+    <img src="keyboard.png" alt="英文鍵盤圖片">
+
+    <button onclick="playSound()">開始</button>
+
+    <p id="message"></p>
+
+    <audio id="beepSound" src="beep.wav"></audio>
+
+    <script>
+        function playSound() {
+            const sound = document.getElementById("beepSound");
+            sound.currentTime = 0;
+            sound.play(); // 直接播放 beep.wav 檔案內建的雙嗶聲音效
+        }
+    </script>
+
+</body>
+</html>
